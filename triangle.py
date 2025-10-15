@@ -5,7 +5,7 @@ def check_triangle(a, b, c):
     Checks if three lengths form a valid triangle and determines its type.
     
     Args:
-        a (float): Length of side a.
+        a (float): Length of side a
         b (float): Length of side b.
         c (float): Length of side c.
 
@@ -32,7 +32,7 @@ def check_triangle(a, b, c):
     x, y, z = sides_squared[0], sides_squared[1], sides_squared[2] # x^2 + y^2 vs z^2
 
     angle_type = ""
-    # Use a small tolerance for floating point comparisons
+
     TOLERANCE = 1e-9 
     
     if abs(x + y - z) < TOLERANCE:
@@ -48,14 +48,14 @@ def check_triangle(a, b, c):
     return side_type, angle_type
 
 def main():
-    """Main function to handle user input."""
+    
     try:
         print("Enter the lengths of the three sides of the triangle:")
         a = float(input("Side A: "))
         b = float(input("Side B: "))
         c = float(input("Side C: "))
         
-        # Ensure all sides are positive
+        
         if a <= 0 or b <= 0 or c <= 0:
             print("Error: All side lengths must be positive.")
             return
